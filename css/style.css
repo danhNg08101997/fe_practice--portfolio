@@ -273,6 +273,40 @@ header {
 }
 /* Things end */
 
+/* Works start */
+#works{
+  padding-top: 10em;
+  position: relative;
+  overflow-x: hidden;
+}
+
+#works h2{
+  color: var(--gray);
+  text-align: center;
+}
+
+.works__img--single{
+  margin: 2em 0;
+}
+
+.works__img--single:nth-child(odd){
+  padding-top: 5em;
+}
+
+.works__img--single:nth-child(3){
+  margin-top: -5em;
+}
+
+.works__btn{
+  text-align: center;
+  margin-top: 8em;
+}
+
+.works__btn button{
+  font-size: 1rem;
+}
+/* Works end */
+
 /* Responsive start */
 @media (min-width: 62em) {
   /* Header start */
@@ -354,5 +388,26 @@ header {
     text-align: initial;
   }
   /* Things end */
+
+  /* Works start */
+  #works h2{
+    margin-bottom: 3em;
+  }
+
+  .works__img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .works__img--single{
+    margin: 0 5em;
+    width: 35%;
+  }
+
+  .works__img--single:nth-child(3){
+    margin-top: 0;
+  }
+  /* Works end */
 }
 /* Responsive end */
