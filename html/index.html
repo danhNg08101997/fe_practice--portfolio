@@ -34,8 +34,11 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
+    <!-- Overlay start -->
+    <section id="overlay"></section>
+    <!-- Overlay end -->
     <!-- Header start -->
-    <header>
+    <header id="header">
       <div class="container">
         <nav class="navbar">
           <!-- logo -->
@@ -45,15 +48,15 @@
           <!-- Links -->
           <ul class="navbar__links">
             <li class="navbar__link">
-              <a href="#">Work</a>
+              <a href="#works">Work</a>
             </li>
             <li class="navbar__link">
-              <a href="#">About</a>
+              <a href="#things">About</a>
             </li>
             <li class="navbar__link">
-              <a href="#">Resume</a>
+              <a href="#works">Resume</a>
             </li>
-            <a href="#"><button class="navbar__btn">Contact</button></a>
+            <a href="#footer"><button class="navbar__btn">Contact</button></a>
           </ul>
           <!-- Menu button -->
           <div class="navbar__icons">
@@ -151,6 +154,13 @@
     <!-- Works start -->
     <section id="works">
       <div class="container">
+        <!-- decoration -->
+        <div class="works__dec">
+          <img src="/img/work-dec.png" alt="illustration of leaf" />
+        </div>
+        <div class="works__dec">
+          <img src="/img/work-dec.png" alt="illustration of leaf" />
+        </div>
         <!-- Heading -->
         <h2>Recent Works</h2>
         <!-- img -->
@@ -176,6 +186,40 @@
     </section>
     <!-- Works end -->
 
+    <!-- Footer start -->
+    <footer id="footer">
+      <div class="container">
+        <!-- decoration -->
+        <div class="footer__dec">
+          <img src="/img/things-dec-r.png" alt="illustration of leaf" />
+        </div>
+        <!-- img -->
+        <div class="footer__img">
+          <img src="/img/footer-img.png" alt="illustration of woman" />
+        </div>
+        <!-- heading -->
+        <div class="footer__heading">
+          <h1>Contact to me</h1>
+          <!-- contact -->
+          <div class="footer__contact">
+            <a href="tel:0911572155">
+              <i class="fa fa-phone"></i>
+              <p>0911.572.155</p>
+            </a>
+            <a href="mailto: danh.nguyenthanh102@gmail.com">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <p>danh.nguyenthanh102@gmail.com</p>
+            </a>
+          </div>
+          <div class="banner__socials pb-5 pt-5 m-0">
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+            <a href="#"><i class="fa fa-behance"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
