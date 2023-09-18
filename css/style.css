@@ -26,19 +26,19 @@ img {
   padding: 0 10px;
 }
 
-button{
-    text-align: center;
-    color: #fff;
-    background-color: var(--gray);
-    padding: 0.8rem 2.5rem;
-    border-radius: 100px;
-    border: none;
-    cursor: pointer;
-    transition: var(--smooth);
+button {
+  text-align: center;
+  color: #fff;
+  background-color: var(--gray);
+  padding: 0.8rem 2.5rem;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: var(--smooth);
 }
-button:hover{
-    background-color: var(--green-l);
-    transition: var(--smooth);
+button:hover {
+  background-color: var(--green-l);
+  transition: var(--smooth);
 }
 
 :root {
@@ -78,8 +78,14 @@ header {
   background-color: var(--gray);
   z-index: 5;
   transition: var(--smooth);
-  /* transform: translateX(-100%);
-    opacity: 0; */
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.navbar__links.navbar__open {
+  transform: translateX(0);
+  opacity: 1;
+  transition: var(--smooth);
 }
 
 .navbar__link {
@@ -98,9 +104,88 @@ header {
   transition: var(--smooth);
 }
 
-.navbar__btn{
-    font-size: 1rem;
-    background-color: var(--green);
-    margin-left: 45px;
+.navbar__btn {
+  font-size: 1rem;
+  background-color: var(--green);
+  margin-left: 45px;
 }
+
+.navbar__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: var(--smooth);
+  z-index: 6;
+}
+
+.navbar__icon {
+  width: 45px;
+  height: 6px;
+  background-color: var(--gray);
+  border-radius: 5px;
+  transition: var(--smooth);
+  position: relative;
+}
+
+.navbar__icon::after,
+.navbar__icon::before {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 6px;
+  background-color: var(--gray);
+  border-radius: 5px;
+  transition: var(--smooth);
+}
+
+.navbar__icon::before {
+  transform: translateY(-12px);
+}
+
+.navbar__icon::after {
+  transform: translateY(12px);
+}
+
+/* Btn animation */
+.open .navbar__icon {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.open .navbar__icon::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open .navbar__icon::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+/* Btn animation */
+
 /* Header end */
+
+@media (min-width: 62em) {
+  .navbar__links {
+    position: initial;
+    transform: translate(0);
+    opacity: 1;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .navbar__link a {
+    color: var(--gray);
+  }
+
+  .navbar__icons {
+    display: none;
+  }
+
+  .navbar__btn {
+    background-color: var(--gray);
+  }
+}
